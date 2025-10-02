@@ -7,7 +7,11 @@ export const useAppContext = () => {
   return useContext(appContext);
 };
 
-const initialState = {};
+const initialState = {
+  cocktails: [],
+  loading: true,
+  error: null,
+};
 
 const GlobalContext = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
